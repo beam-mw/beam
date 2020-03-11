@@ -14,9 +14,21 @@
 
 #pragma once
 
-#include "../bitcoin/electrum.h"
+#include "../bitcoin/bitcoin_side.h"
+#include "settings_provider.h"
 
-namespace beam::qtum
+namespace beam::wallet
 {
-    using Electrum = bitcoin::Electrum;
-} // namespace beam::qtum
+    class DenariusSide : public BitcoinSide
+    {
+    public:
+        DenariusSide(BaseTransaction& tx, bitcoin::IBridge::Ptr bitcoinBridge, denarius::ISettingsProvider& settingsProvider, bool isBeamSide);
+
+        static bool CheckAmount(Amount amount, Amount feeRate);
+        static Amount CalcTotalFee(Amount feeRate);
+
+    protected:
+
+        uint32_t GetLockTxEstimatedTimeInBeamBlocks() const override;
+    };
+}

@@ -2248,5 +2248,25 @@ deploy the key at the node you trust completely.</oldsource>
         <extracomment>settings update wallet button</extracomment>
         <translation type="unfinished"></translation>
     </message>
+    <message id="general-denarius">
+        <source>Denarius</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="denarius-show-seed-title">
+        <source>Denarius seed phrase</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="denarius-show-addresses-title">
+        <source>Denarius wallet addresses</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="settings-swap-denarius-node">
+        <source>Denarius node</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message id="settings-swap-denarius-electrum">
+        <source>Denarius electrum</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

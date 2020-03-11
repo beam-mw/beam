@@ -16,7 +16,7 @@
 
 #include "../bitcoin/electrum.h"
 
-namespace beam::qtum
+namespace beam::denarius
 {
     using Electrum = bitcoin::Electrum;
-} // namespace beam::qtum
+} // namespace beam::denarius

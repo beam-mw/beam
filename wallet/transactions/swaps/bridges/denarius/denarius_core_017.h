@@ -14,9 +14,18 @@
 
 #pragma once
 
-#include "../bitcoin/electrum.h"
+#include "../bitcoin/bitcoin_core_017.h"
+#include "settings_provider.h"
 
-namespace beam::qtum
+namespace beam::denarius
 {
-    using Electrum = bitcoin::Electrum;
-} // namespace beam::qtum
+    class DenariusCore017 : public bitcoin::BitcoinCore017
+    {
+    public:
+        DenariusCore017() = delete;
+        DenariusCore017(io::Reactor& reactor, ISettingsProvider& settingsProvider);
+
+    protected:
+        std::string getCoinName() const override;
+    };
+} // namespace beam::denarius

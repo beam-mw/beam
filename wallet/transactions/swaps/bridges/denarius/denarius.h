@@ -14,9 +14,8 @@
 
 #pragma once
 
-#include "../bitcoin/electrum.h"
-
-namespace beam::qtum
-{
-    using Electrum = bitcoin::Electrum;
-} // namespace beam::qtum
+#include "denarius_core_017.h"
+#include "settings.h"
+#include "denarius_side.h"
+#include "electrum.h"
+#include "common.h"

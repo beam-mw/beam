@@ -14,9 +14,17 @@
 
 #pragma once
 
-#include "../bitcoin/electrum.h"
+#include <stdint.h>
 
-namespace beam::qtum
+#include "../bitcoin/common.h"
+
+namespace beam::denarius
 {
-    using Electrum = bitcoin::Electrum;
-} // namespace beam::qtum
+    constexpr uint64_t kDustThreshold = bitcoin::kDustThreshold;
+    extern const char kMainnetGenesisBlockHash[];
+    extern const char kTestnetGenesisBlockHash[];
+    extern const char kRegtestGenesisBlockHash[];
+
+    uint8_t getAddressVersion();
+    std::vector<std::string> getGenesisBlockHashes();
+} // namespace beam::denarius

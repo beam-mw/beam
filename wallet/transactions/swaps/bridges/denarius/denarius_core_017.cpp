@@ -12,11 +12,19 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#pragma once
+#include "denarius_core_017.h"
 
-#include "../bitcoin/electrum.h"
+#include "bitcoin/bitcoin.hpp"
 
-namespace beam::qtum
+namespace beam::denarius
 {
-    using Electrum = bitcoin::Electrum;
-} // namespace beam::qtum
+    DenariusCore017::DenariusCore017(io::Reactor& reactor, ISettingsProvider& settingsProvider)
+        : bitcoin::BitcoinCore017(reactor, settingsProvider)
+    {
+    }
+
+    std::string DenariusCore017::getCoinName() const
+    {
+        return "denarius";
+    }
+} // namespace beam::denarius
